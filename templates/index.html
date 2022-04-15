@@ -22,18 +22,10 @@
         }
 
         .carousel-item {
-            height: 100vh;
+            height: 90vh;
             background: #000;
             color: white;
             position: relative;
-        }
-
-        .container {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding-bottom: 50px;
         }
 
         .overlay-image {
@@ -46,37 +38,37 @@
             background-size: cover;
             opacity: 0.7;
         }
+
+        .fit-image {
+            width: 80%;
+            object-fit: contain;
+            margin: 1.5rem;
+            opacity: 0.75;
+
+        }
     </style>
 
-    <!-- <header class="p-3 bg-dark text-white">
+    <header class="p-3 bg-black text-white">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                </a>
-
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Главная</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Блог</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Новости</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Speaking</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Listening</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Writing</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Reading</a></li>
                 </ul>
 
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                    <input type="search" class="form-control form-control-dark" placeholder="Search..."
-                        aria-label="Search">
-                </form>
-
                 <div class="text-end">
-                    <button type="button" class="btn btn-outline-light me-2">Login</button>
-                    <button type="button" class="btn btn-warning">Sign-up</button>
+                    <button type="button" class="btn btn-outline-light me-2">Авторизоваться</button>
+                    <button type="button" class="btn btn-warning">Зарегистрироваться</button>
                 </div>
             </div>
         </div>
-    </header> -->
+    </header>
+
 
     <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <ol class="carousel-indicators">
@@ -87,28 +79,18 @@
         <div class="carousel-inner">
             <div class="carousel-item active" data-interval="2000">
                 <div class="overlay-image" style="background-image: url(../static/img/slider_blog.jpg);"></div>
-                <div class="container">
-                    <h1>Example headline</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, totam, veniam minus voluptas
-                        aliquam
-                        nobis
-                        perspiciatis labore illum, hic quidem fugiat adipisci nemo doloremque odit! Suscipit temporibus
-                        odit
-                        provident blanditiis.</p>
-                    <a href="#" class="btn btn-lg btn-primary">Go to Blog</a>
+                <div class="container" style="position: absolute; bottom: 0; left: 0; right: 0; padding-bottom: 50px;">
+                    <h1>Личный блог</h1>
+                    <p>Мой личный блог, в котором я буду отражать свою повседневную деятельность</p>
+                    <a href="#" class="btn btn-lg btn-dark">Перейти в Блог</a>
                 </div>
             </div>
             <div class="carousel-item" data-interval="1000">
-                <div class=" overlay-image" style="background-image: url(../static/img/slider-1.jpg);"></div>
-                <div class="container">
-                    <h1>Example headline</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, totam, veniam minus voluptas
-                        aliquam
-                        nobis
-                        perspiciatis labore illum, hic quidem fugiat adipisci nemo doloremque odit! Suscipit temporibus
-                        odit
-                        provident blanditiis.</p>
-                    <a href="#" class="btn btn-lg btn-primary">Go to Blog</a>
+                <div class=" overlay-image" style="background-image: url(../static/img/news.jpg);"></div>
+                <div class="container" style="position: absolute; bottom: 0; left: 0; right: 0; padding-bottom: 50px;">
+                    <h1>Новости</h1>
+                    <p>Все последние и квалифицированные международные новости</p>
+                    <a href="#" class="btn btn-lg btn-dark">Перейти к новостям</a>
                 </div>
             </div>
         </div>
@@ -122,122 +104,39 @@
         </a>
     </div>
 
-
-    <div class="row align-items-md-stretch">
-        <div class="col-md-6 mt-4">
-            <img src="../static/img/listening.jpg" alt="Listening" style="position: relative; background-size: cover; ">
-        </div>
-
-        <div class="col-md-6 mt-4">
-            <img src="../static/img/listening.jpg" alt="Listening" style="position: relative; background-size: cover;">
-        </div>
-
-        <div class="col-md-6 mt-4 mb-4">
-            < <img src="../static/img/listening.jpg" alt="Listening"
-                style="position: relative; background-size: cover;">
-        </div>
-
-        <div class="col-md-6 mt-4 mb-4">
-            <img src="../static/img/listening.jpg" alt="Listening" style="position: relative; background-size: cover;">
-            <!-- <div class="h-100 p-5 bg-light">
-                    <h2>Add borders</h2>
-                    <button class="btn btn-outline-secondary" type="button">Example button</button>
-                </div> -->
-        </div>
-
-
-
-        <!-- <div class="grid-portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <div class="portfolio-item">
-                        <div class="thumb">
-                            <a href="#">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <h1>Listening <em>раздель</em></h1>
-                                        <p>Удивительные субтитры идут здесь</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="image">
-                                <img src="../static/img/listening.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="portfolio-item">
-                        <div class="thumb">
-                            <a href="#">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <h1>Reading <em>раздель</em></h1>
-                                        <p>Удивительные субтитры идут здесь</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="image">
-                                <img src="../static/img/reading.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="portfolio-item">
-                        <div class="thumb">
-                            <a href="#">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <h1>Speaking <em>раздель</em></h1>
-                                        <p>Удивительные субтитры идут здесь</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="image">
-                                <img src="../static/img/speaking.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="portfolio-item">
-                        <div class="thumb">
-                            <a href="#">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <h1>Writing <em>раздель</em></h1>
-                                        <p>Удивительные субтитры идут здесь</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="image">
-                                <img src="../static/img/writing.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img src="../static/img/listening.jpg" alt="Listening" class="fit-image">
+            </div>
+            <div class="col-6">
+                <img src="../static/img/speaking.jpg" alt="Speaking" class="fit-image">
+            </div>
+            <div class="col-6">
+                <img src="../static/img/reading.jpg" alt="Reading" class="fit-image">
+            </div>
+            <div class="col-6">
+                <img src="../static/img/writing.jpg" alt="Writing" class="fit-image">
             </div>
         </div>
-    </div> -->
+    </div>
 
-
-        <!-- <footer class="p-3 bg-dark text-white">
+    <footer class="p-3 bg-black text-white">
         <div class="container">
-            <div class="d-flex align-items-center justify-content-center">
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
                 <p>Copyright &copy; 2022 BigBrain</p>
             </div>
         </div>
-    </footer> -->
+    </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-        </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

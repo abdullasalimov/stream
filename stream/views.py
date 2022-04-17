@@ -17,7 +17,7 @@ def news_single(request):
     return render(request, 'news/single-page.html')
 
 def speaking(request):
-    return render(request, 'upload.html')
+    return render(request, 'speaking/upload.html')
 
 def listening_single(request):
     return render(request, 'listening/single-channel.html')
@@ -28,8 +28,8 @@ def listening_video(request):
 def writing_index(request):
     return render(request, 'writing/index.html')
 
-def writing_newspost(request):
-    return render(request, 'writing/newspost.html')
+def writing_newpost(request):
+    return render(request, 'writing/newpost.html')
 
 def writing_post(request):
     return render(request, 'writing/post.html')

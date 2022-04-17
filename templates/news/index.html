@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,11 +18,11 @@
     <!-- CSS Libraries -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="lib/slick/slick.css" rel="stylesheet">
-    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+    <link href="{% static 'news/lib/slick/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'news/lib/slick/slick-theme.css' %}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static 'news/css/style.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -36,13 +37,13 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto">
-                        <a href="index.html" class="nav-item nav-link active">BigBrain</a>
-                        <a href="#" class="nav-item nav-link">Блог</a>
-                        <a href="#" class="nav-item nav-link">Новости</a>
-                        <a href="#" class="nav-item nav-link">Speaking</a>
-                        <a href="#" class="nav-item nav-link">Listening</a>
-                        <a href="#" class="nav-item nav-link">Writing</a>
-                        <a href="#" class="nav-item nav-link">Reading</a>
+                        <a href="{% url 'index' %}" class="nav-item nav-link active">BigBrain</a>
+                        <a href="{% url 'blog_index' %}" class="nav-item nav-link">Блог</a>
+                        <a href="{% url 'news_index' %}" class="nav-item nav-link">Новости</a>
+                        <a href="{% url 'speaking' %}" class="nav-item nav-link">Speaking</a>
+                        <a href="{% url 'listening_single' %}" class="nav-item nav-link">Listening</a>
+                        <a href="{% url 'writing_index' %}" class="nav-item nav-link">Writing</a>
+                        <a href="{% url 'reading_index' %}" class="nav-item nav-link">Reading</a>
                     </div>
                 </div>
             </nav>
@@ -58,18 +59,18 @@
                     <div class="row tn-slider">
                         <div class="col-md-6">
                             <div class="tn-img">
-                                <img src="img/news-450x350-1.jpg" />
+                                <img src="{% static 'news/img/news-450x350-1.jpg' %}" />
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="tn-img">
-                                <img src="img/news-450x350-2.jpg" />
+                                <img src="{% static 'news/img/news-450x350-2.jpg' %}" />
                                 <div class="tn-title">
-                                    <a href="">Лучшие исторические новости мира</a>
+                                    <a href="{% url 'news_single' %}">Лучшие исторические новости мира</a>
                                 </div>
                             </div>
                         </div>
@@ -79,33 +80,33 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="tn-img">
-                                <img src="img/news-350x223-1.jpg" />
+                                <img src="{% static 'news/img/news-350x223-1.jpg' %}" />
                                 <div class="tn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="tn-img">
-                                <img src="img/news-350x223-2.jpg" />
+                                <img src="{% static 'news/img/news-350x223-2.jpg' %}" />
                                 <div class="tn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="tn-img">
-                                <img src="img/news-350x223-3.jpg" />
+                                <img src="{% static 'news/img/news-350x223-3.jpg' %}" />
                                 <div class="tn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="tn-img">
-                                <img src="img/news-350x223-4.jpg" />
+                                <img src="{% static 'news/img/news-350x223-4.jpg' %}" />
                                 <div class="tn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
@@ -125,25 +126,25 @@
                     <div class="row cn-slider">
                         <div class="col-md-6">
                             <div class="cn-img">
-                                <img src="img/news-350x223-1.jpg" />
+                                <img src="{% static 'news/img/news-350x223-1.jpg' %}" />
                                 <div class="cn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cn-img">
-                                <img src="img/news-350x223-2.jpg" />
+                                <img src="{% static 'news/img/news-350x223-2.jpg' %}" />
                                 <div class="cn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cn-img">
-                                <img src="img/news-350x223-3.jpg" />
+                                <img src="{% static 'news/img/news-350x223-3.jpg' %}" />
                                 <div class="cn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
@@ -154,25 +155,25 @@
                     <div class="row cn-slider">
                         <div class="col-md-6">
                             <div class="cn-img">
-                                <img src="img/news-350x223-4.jpg" />
+                                <img src="{% static 'news/img/news-350x223-4.jpg' %}" />
                                 <div class="cn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cn-img">
-                                <img src="img/news-350x223-5.jpg" />
+                                <img src="{% static 'news/img/news-350x223-5.jpg' %}" />
                                 <div class="cn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cn-img">
-                                <img src="img/news-350x223-1.jpg" />
+                                <img src="{% static 'news/img/news-350x223-1.jpg' %}" />
                                 <div class="cn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
@@ -192,25 +193,25 @@
                     <div class="row cn-slider">
                         <div class="col-md-6">
                             <div class="cn-img">
-                                <img src="img/news-350x223-5.jpg" />
+                                <img src="{% static 'news/img/news-350x223-5.jpg' %}" />
                                 <div class="cn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cn-img">
-                                <img src="img/news-350x223-4.jpg" />
+                                <img src="{% static 'news/img/news-350x223-4.jpg' %}" />
                                 <div class="cn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cn-img">
-                                <img src="img/news-350x223-3.jpg" />
+                                <img src="{% static 'news/img/news-350x223-3.jpg' %}" />
                                 <div class="cn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
@@ -221,25 +222,25 @@
                     <div class="row cn-slider">
                         <div class="col-md-6">
                             <div class="cn-img">
-                                <img src="img/news-350x223-2.jpg" />
+                                <img src="{% static 'news/img/news-350x223-2.jpg' %}" />
                                 <div class="cn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cn-img">
-                                <img src="img/news-350x223-1.jpg" />
+                                <img src="{% static 'news/img/news-350x223-1.jpg' %}" />
                                 <div class="cn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cn-img">
-                                <img src="img/news-350x223-3.jpg" />
+                                <img src="{% static 'news/img/news-350x223-3.jpg' %}" />
                                 <div class="cn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
@@ -271,28 +272,28 @@
                         <div id="featured" class="container tab-pane active">
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-1.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-1.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-2.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-2.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-3.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-3.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
@@ -300,28 +301,28 @@
                         <div id="popular" class="container tab-pane fade">
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-4.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-4.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-5.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-5.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-1.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-1.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
@@ -329,28 +330,28 @@
                         <div id="latest" class="container tab-pane fade">
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-2.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-2.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-3.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-3.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-4.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-4.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
@@ -375,28 +376,28 @@
                         <div id="m-viewed" class="container tab-pane active">
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-5.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-5.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-4.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-4.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-3.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-3.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
@@ -404,28 +405,28 @@
                         <div id="m-read" class="container tab-pane fade">
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-2.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-2.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-1.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-1.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-3.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-3.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
@@ -433,28 +434,28 @@
                         <div id="m-recent" class="container tab-pane fade">
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-4.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-4.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-5.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-5.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
                             <div class="tn-news">
                                 <div class="tn-img">
-                                    <img src="img/news-350x223-1.jpg" />
+                                    <img src="{% static 'news/img/news-350x223-1.jpg' %}" />
                                 </div>
                                 <div class="tn-title">
-                                    <a href="">
+                                    <a href="{% url 'news_single' %}">
                                         Немного текста о новостях</a>
                                 </div>
                             </div>
@@ -474,73 +475,73 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mn-img">
-                                <img src="img/news-350x223-1.jpg" />
+                                <img src="{% static 'news/img/news-350x223-1.jpg' %}" />
                                 <div class="mn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mn-img">
-                                <img src="img/news-350x223-2.jpg" />
+                                <img src="{% static 'news/img/news-350x223-2.jpg' %}" />
                                 <div class="mn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mn-img">
-                                <img src="img/news-350x223-3.jpg" />
+                                <img src="{% static 'news/img/news-350x223-3.jpg' %}" />
                                 <div class="mn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mn-img">
-                                <img src="img/news-350x223-4.jpg" />
+                                <img src="{% static 'news/img/news-350x223-4.jpg' %}" />
                                 <div class="mn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mn-img">
-                                <img src="img/news-350x223-5.jpg" />
+                                <img src="{% static 'news/img/news-350x223-5.jpg' %}" />
                                 <div class="mn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mn-img">
-                                <img src="img/news-350x223-1.jpg" />
+                                <img src="{% static 'news/img/news-350x223-1.jpg' %}" />
                                 <div class="mn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mn-img">
-                                <img src="img/news-350x223-2.jpg" />
+                                <img src="{% static 'news/img/news-350x223-2.jpg' %}" />
                                 <div class="mn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mn-img">
-                                <img src="img/news-350x223-3.jpg" />
+                                <img src="{% static 'news/img/news-350x223-3.jpg' %}" />
                                 <div class="mn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mn-img">
-                                <img src="img/news-350x223-4.jpg" />
+                                <img src="{% static 'news/img/news-350x223-4.jpg' %}" />
                                 <div class="mn-title">
-                                    <a href="">Еще один текст о новостях</a>
+                                    <a href="{% url 'news_single' %}">Еще один текст о новостях</a>
                                 </div>
                             </div>
                         </div>
@@ -551,12 +552,13 @@
                     <div class="mn-list">
                         <h2>Прочитайте больше</h2>
                         <ul>
-                            <li><a href="">Немного текста о новостях</a></li>
-                            <li><a href="">Время, которое заканчивается диаметром или ценой</a></li>
-                            <li><a href="">Страх не подростков</a></li>
-                            <li><a href="">Даже игры жизни много</a></li>
-                            <li><a href="">Не больше планирования, чем масса жизни</a></li>
-                            <li><a href="">Но перед макияжем</a></li>
+                            <li><a href="{% url 'news_single' %}">Немного текста о новостях</a></li>
+                            <li><a href="{% url 'news_single' %}">Время, которое заканчивается диаметром или ценой</a>
+                            </li>
+                            <li><a href="{% url 'news_single' %}">Страх не подростков</a></li>
+                            <li><a href="{% url 'news_single' %}">Даже игры жизни много</a></li>
+                            <li><a href="{% url 'news_single' %}">Не больше планирования, чем масса жизни</a></li>
+                            <li><a href="{% url 'news_single' %}">Но перед макияжем</a></li>
                         </ul>
                     </div>
                 </div>
@@ -584,11 +586,11 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/slick/slick.min.js"></script>
+    <script src="{% static 'news/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'news/lib/slick/slick.min.js' %}"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{% static 'news/js/main.js' %}"></script>
 </body>
 
 </html>

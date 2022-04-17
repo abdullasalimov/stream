@@ -52,13 +52,13 @@
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-white">BigBrain</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Блог</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Новости</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Speaking</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Listening</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Writing</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Reading</a></li>
+                    <li><a href="{% url 'index' %}" class="nav-link px-2 text-white">BigBrain</a></li>
+                    <li><a href="{% url 'blog_index' %}" class="nav-link px-2 text-white">Блог</a></li>
+                    <li><a href="{% url 'news_index' %}" class="nav-link px-2 text-white">Новости</a></li>
+                    <li><a href="{% url 'speaking' %}" class="nav-link px-2 text-white">Speaking</a></li>
+                    <li><a href="{% url 'listening_single' %}" class="nav-link px-2 text-white">Listening</a></li>
+                    <li><a href="{% url 'writing_index' %}" class="nav-link px-2 text-white">Writing</a></li>
+                    <li><a href="{% url 'reading_index' %}" class="nav-link px-2 text-white">Reading</a></li>
                 </ul>
 
                 <div class="text-end">
@@ -82,7 +82,7 @@
                 <div class="container" style="position: absolute; bottom: 0; left: 0; right: 0; padding-bottom: 50px;">
                     <h1>Личный блог</h1>
                     <p>Мой личный блог, в котором я буду отражать свою повседневную деятельность</p>
-                    <a href="#" class="btn btn-lg btn-dark">Перейти в Блог</a>
+                    <a href="{% url 'blog_index' %}" class="btn btn-lg btn-dark">Перейти в Блог</a>
                 </div>
             </div>
             <div class="carousel-item" data-interval="1000">
@@ -90,7 +90,7 @@
                 <div class="container" style="position: absolute; bottom: 0; left: 0; right: 0; padding-bottom: 50px;">
                     <h1>Новости</h1>
                     <p>Все последние и квалифицированные международные новости</p>
-                    <a href="#" class="btn btn-lg btn-dark">Перейти к новостям</a>
+                    <a href="{% url 'news_index' %}" class="btn btn-lg btn-dark">Перейти к новостям</a>
                 </div>
             </div>
         </div>
@@ -109,22 +109,22 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <a href="#">
+                <a href="{% url 'listening_single' %}">
                     <img src="../static/listening.jpg" alt="Listening" class="fit-image">
                 </a>
             </div>
             <div class="col-6">
-                <a href="#">
+                <a href="{% url 'speaking' %}">
                     <img src="../static/speaking.jpg" alt="Speaking" class="fit-image">
                 </a>
             </div>
             <div class="col-6">
-                <a href="#">
+                <a href="{% url 'reading_index' %}">
                     <img src="../static/reading.jpg" alt="Reading" class="fit-image">
                 </a>
             </div>
             <div class="col-6">
-                <a href="#">
+                <a href="{% url 'writing_index' %}">
                     <img src="../static/writing.jpg" alt="Writing" class="fit-image">
                 </a>
             </div>

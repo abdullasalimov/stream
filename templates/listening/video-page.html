@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,14 +12,15 @@
    <!-- Favicon Icon -->
    <link rel="icon" type="image/png" href="img/favicon.png">
    <!-- Bootstrap core CSS-->
-   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="{% static 'speaking_listening/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
    <!-- Custom fonts for this template-->
-   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+   <link href="{% static 'speaking_listening/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet"
+      type="text/css">
    <!-- Custom styles for this template-->
-   <link href="css/osahan.css" rel="stylesheet">
+   <link href="{% static 'speaking_listening/css/osahan.css' %}" rel="stylesheet">
    <!-- Owl Carousel -->
-   <link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css">
-   <link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css">
+   <link rel="stylesheet" href="{% static 'speaking_listening/vendor/owl-carousel/owl.carousel.css' %}">
+   <link rel="stylesheet" href="{% static 'speaking_listening/vendor/owl-carousel/owl.theme.css' %}">
 </head>
 
 <body id="page-top">
@@ -32,25 +34,26 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
          <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-               <a class="nav-link" href="#">BigBrain</a>
+               <a class="nav-link" href="{% url 'index' %}">BigBrain</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Блог</a>
+               <a class="nav-link" href="{% url 'blog_index' %}">Блог</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Новости</a>
+               <a class="nav-link" href="{% url 'news_index' %}">Новости</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Speaking</a>
+               <a class="nav-link" href="{% url 'speaking' %}">Speaking</a>
             </li>
             <li class="nav-item active">
-               <a class="nav-link" href="#">Listening <span class="sr-only">(current)</span></a>
+               <a class="nav-link" href="{% url 'listening_single' %}">Listening <span
+                     class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Writing</a>
+               <a class="nav-link" href="{% url 'writing_index' %}">Writing</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Reading</a>
+               <a class="nav-link" href="{% url 'reading_index' %}">Reading</a>
             </li>
          </ul>
          <form class="form-inline my-2 my-lg-0">
@@ -80,7 +83,7 @@
                      <div class="float-right"><button class="btn btn-danger" type="button">Подписывайся
                            <strong>1.4M</strong></button> <button class="btn btn btn-outline-danger" type="button"><i
                               class="fas fa-bell"></i></button></div>
-                     <img class="img-fluid" src="img/s4.png" alt="">
+                     <img class="img-fluid" src="{% static 'speaking_listening/img/s4.png' %}" alt="">
                      <p><a href="#"><strong>Алекс Канал</strong></a> <span title="" data-placement="top"
                            data-toggle="tooltip" data-original-title="Verified"><i
                               class="fas fa-check-circle text-success"></i></span></p>
@@ -139,7 +142,8 @@
                         <div class="video-card video-card-list">
                            <div class="video-card-image">
                               <a class="play-icon" href="#"><i class="fas fa-play-circle"></i></a>
-                              <a href="#"><img class="img-fluid" src="img/v1.png" alt=""></a>
+                              <a href="#"><img class="img-fluid" src="{% static 'speaking_listening/img/v1.png' %}"
+                                    alt=""></a>
                               <div class="time">3:50</div>
                            </div>
                            <div class="video-card-body">
@@ -172,7 +176,8 @@
                         <div class="video-card video-card-list">
                            <div class="video-card-image">
                               <a class="play-icon" href="#"><i class="fas fa-play-circle"></i></a>
-                              <a href="#"><img class="img-fluid" src="img/v2.png" alt=""></a>
+                              <a href="#"><img class="img-fluid" src="{% static 'speaking_listening/img/v2.png' %}"
+                                    alt=""></a>
                               <div class="time">3:50</div>
                            </div>
                            <div class="video-card-body">
@@ -205,7 +210,8 @@
                         <div class="video-card video-card-list">
                            <div class="video-card-image">
                               <a class="play-icon" href="#"><i class="fas fa-play-circle"></i></a>
-                              <a href="#"><img class="img-fluid" src="img/v3.png" alt=""></a>
+                              <a href="#"><img class="img-fluid" src="{% static 'speaking_listening/img/v3.png' %}"
+                                    alt=""></a>
                               <div class="time">3:50</div>
                            </div>
                            <div class="video-card-body">
@@ -238,7 +244,8 @@
                         <div class="video-card video-card-list">
                            <div class="video-card-image">
                               <a class="play-icon" href="#"><i class="fas fa-play-circle"></i></a>
-                              <a href="#"><img class="img-fluid" src="img/v4.png" alt=""></a>
+                              <a href="#"><img class="img-fluid" src="{% static 'speaking_listening/img/v4.png' %}"
+                                    alt=""></a>
                               <div class="time">3:50</div>
                            </div>
                            <div class="video-card-body">
@@ -271,7 +278,8 @@
                         <div class="video-card video-card-list">
                            <div class="video-card-image">
                               <a class="play-icon" href="#"><i class="fas fa-play-circle"></i></a>
-                              <a href="#"><img class="img-fluid" src="img/v5.png" alt=""></a>
+                              <a href="#"><img class="img-fluid" src="{% static 'speaking_listening/img/v5.png' %}"
+                                    alt=""></a>
                               <div class="time">3:50</div>
                            </div>
                            <div class="video-card-body">
@@ -304,7 +312,8 @@
                         <div class="video-card video-card-list">
                            <div class="video-card-image">
                               <a class="play-icon" href="#"><i class="fas fa-play-circle"></i></a>
-                              <a href="#"><img class="img-fluid" src="img/v6.png" alt=""></a>
+                              <a href="#"><img class="img-fluid" src="{% static 'speaking_listening/img/v6.png' %}"
+                                    alt=""></a>
                               <div class="time">3:50</div>
                            </div>
                            <div class="video-card-body">
@@ -337,7 +346,8 @@
                         <div class="video-card video-card-list">
                            <div class="video-card-image">
                               <a class="play-icon" href="#"><i class="fas fa-play-circle"></i></a>
-                              <a href="#"><img class="img-fluid" src="img/v2.png" alt=""></a>
+                              <a href="#"><img class="img-fluid" src="{% static 'speaking_listening/img/v2.png' %}"
+                                    alt=""></a>
                               <div class="time">3:50</div>
                            </div>
                            <div class="video-card-body">
@@ -381,8 +391,7 @@
          <div class="row no-gutters">
             <div class="col-lg-6 col-sm-6">
                <p class="mt-1 mb-0"><strong class="text-dark">BigBrain</strong>.
-                  <small class="mt-0 mb-0"><a class="text-primary" target="_blank"
-                        href="https://templatespoint.net/">Listening</a>
+                  <small class="mt-0 mb-0"><a class="text-primary" target="_blank" href="#">Listening</a>
                   </small>
                </p>
             </div>
@@ -417,14 +426,15 @@
       </div>
    </div>
    <!-- Bootstrap core JavaScript-->
-   <script src="vendor/jquery/jquery.min.js"></script>
-   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="{% static 'speaking_listening/vendor/jquery/jquery.min.js' %}"></script>
+   <script src="{% static 'speaking_listening/vendor/bootstrap/js/bootstrap.bundle.min.js' %}">
+   </script>
    <!-- Core plugin JavaScript-->
-   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+   <script src="{% static 'speaking_listening/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
    <!-- Owl Carousel -->
-   <script src="vendor/owl-carousel/owl.carousel.js"></script>
+   <script src="{% static 'speaking_listening/vendor/owl-carousel/owl.carousel.js' %}"></script>
    <!-- Custom scripts for all pages-->
-   <script src="js/custom.js"></script>
+   <script src="{% static 'speaking_listening/js/custom.js' %}"></script>
 </body>
 
 </html>
